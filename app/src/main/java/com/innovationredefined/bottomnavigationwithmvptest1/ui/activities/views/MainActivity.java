@@ -1,15 +1,13 @@
-package com.innovationredefined.bottomnavigationwithmvptest1;
+package com.innovationredefined.bottomnavigationwithmvptest1.ui.activities.views;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.internal.BaselineLayout;
 import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenu;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -21,7 +19,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.innovationredefined.bottomnavigationwithmvptest1.R;
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.adapter.SampleFragmentAdapter;
 
 import java.lang.reflect.Field;
 

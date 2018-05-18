@@ -1,9 +1,14 @@
-package com.innovationredefined.bottomnavigationwithmvptest1;
+package com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.adapter;
 
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.views.FirstFragment;
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.views.FourthFragment;
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.views.SecondFragment;
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.views.ThirdFragment;
 
 /**
  * Created by Arpan on 3/7/2018.
@@ -11,7 +16,7 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 
 public class SampleFragmentAdapter extends FragmentPagerAdapter {
-    SampleFragmentAdapter(FragmentManager fm) {
+    public SampleFragmentAdapter(FragmentManager fm) {
         super(fm);
     }
 
