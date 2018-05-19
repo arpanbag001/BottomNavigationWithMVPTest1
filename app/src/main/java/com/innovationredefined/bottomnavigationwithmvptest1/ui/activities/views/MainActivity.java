@@ -26,7 +26,7 @@ import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager viewPager;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void setupBottomNavigationViewWithViewpager(BottomNavigationView bottomNavigationView) {
+    private void setupBottomNavigationViewWithViewpager(BottomNavigationView bottomNavigationView) {
         SampleFragmentAdapter fragmentAdapter = new SampleFragmentAdapter(getSupportFragmentManager());
         viewPager = findViewById(R.id.viewpager);
         viewPager.setAdapter(fragmentAdapter);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    void customizeBottomNavigationViewAccordingToOrientation(BottomNavigationView bottomNavigationView, int orientation) {
+    private void customizeBottomNavigationViewAccordingToOrientation(BottomNavigationView bottomNavigationView, int orientation) {
         if (orientation == Configuration.ORIENTATION_PORTRAIT)
             customizeBottomNavigationView(bottomNavigationView, false);
         else if (orientation == Configuration.ORIENTATION_LANDSCAPE)
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("RestrictedAPI")
-    void customizeBottomNavigationView(BottomNavigationView bottomNavigationView, boolean shouldShowLabels) {
+    private void customizeBottomNavigationView(BottomNavigationView bottomNavigationView, boolean shouldShowLabels) {
         LayoutInflater layoutInflater = LayoutInflater.from(this);
 
         String bottomNavigationMenuItemLabel;

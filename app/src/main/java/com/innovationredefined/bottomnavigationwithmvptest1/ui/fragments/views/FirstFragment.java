@@ -17,7 +17,6 @@ import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.present
  * A simple {@link Fragment} subclass.
  */
 public class FirstFragment extends Fragment {
-    View firstFragmentRootView;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -28,7 +27,7 @@ public class FirstFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        firstFragmentRootView = inflater.inflate(R.layout.fragment_first, container, false);
+        View firstFragmentRootView = inflater.inflate(R.layout.fragment_first, container, false);
         TextView textView = firstFragmentRootView.findViewById(R.id.textview);
 
         FragmentPresenterImplementer fragmentPresenterImplementer = new FragmentPresenterImplementer();

@@ -2,7 +2,7 @@ package com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.presen
 
 import android.support.v4.app.Fragment;
 
-public interface FragmentPresenter {
+interface FragmentPresenter {
     void subscribe(Fragment fragment);
 
     void unsubscribe();
