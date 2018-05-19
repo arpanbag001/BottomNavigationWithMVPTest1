@@ -2,6 +2,7 @@ package com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.views;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.innovationredefined.bottomnavigationwithmvptest1.R;
-import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.presenter.FragmentPresenter;
+import com.innovationredefined.bottomnavigationwithmvptest1.ui.fragments.presenter.FragmentPresenterImplementer;
 
 
 /**
@@ -25,13 +26,16 @@ public class FourthFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         fourthFragmentRootView = inflater.inflate(R.layout.fragment_first, container, false);
         TextView textView = fourthFragmentRootView.findViewById(R.id.textview);
-        FragmentPresenter fragmentPresenter = new FragmentPresenter(this);
-        textView.setText(fragmentPresenter.getData());
+
+        FragmentPresenterImplementer fragmentPresenterImplementer = new FragmentPresenterImplementer();
+        fragmentPresenterImplementer.subscribe(this);
+
+        textView.setText(fragmentPresenterImplementer.getData());
         return fourthFragmentRootView;
     }
 
